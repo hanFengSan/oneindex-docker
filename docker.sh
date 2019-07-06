@@ -1,4 +1,7 @@
 #!/bin/bash
+docker container stop alex-oneindex
+docker container rm alex-oneindex
+docker image rm alex-oneindex
 docker build -t alex-oneindex .
 docker run -d --name alex-oneindex \
     -p 8081:80 --restart=always \
